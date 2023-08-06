@@ -21,9 +21,10 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        stage('Deploy') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
+                input message: 'end task ?'
             }
         }
     }
