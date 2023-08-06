@@ -25,6 +25,7 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'end task ?'
+                sh './jenkins/scripts/kill.sh'
             }
         }
     }
